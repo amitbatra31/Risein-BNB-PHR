@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Apollo Hospitals",
+        "address": "123 Main Street, City",
+        "contact": "123-456-7890"
+    },
+    {
+        "name": "Fortis Hospital",
+        "address": "456 Park Avenue, Town",
+        "contact": "987-654-3210"
+    },
+    {
+        "name": "Manipal Hospital",
+        "address": "789 Central Road, District",
+        "contact": "456-123-7890"
+    },
+    {
+        "name": "Max Healthcare",
+        "address": "567 North Lane, Suburb",
+        "contact": "789-987-6543"
+    },
+    {
+        "name": "Columbia Asia Hospital",
+        "address": "234 East Street, Urban",
+        "contact": "345-678-9012"
+    },
+    {
+        "name": "Artemis Hospital",
+        "address": "678 West Road, Metropolis",
+        "contact": "567-890-1234"
+    },
+    {
+        "name": "AIIMS",
+        "address": "890 South Avenue, Village",
+        "contact": "678-901-2345"
+    },
+    {
+        "name": "Sir Ganga Ram Hospital",
+        "address": "901 West End, Suburb",
+        "contact": "890-345-6789"
+    },
+    {
+        "name": "BLK Super Speciality Hospital",
+        "address": "345 North Road, City",
+        "contact": "123-890-4567"
+    },
+    {
+        "name": "Wockhardt Hospitals",
+        "address": "567 Pine Lane, Town",
+        "contact": "789-234-9012"
+    },
+    {
+        "name": "Narayana Health",
+        "address": "123 Elm Street, Village",
+        "contact": "456-678-3456"
+    },
+    {
+        "name": "Medanta - The Medicity",
+        "address": "789 Oak Avenue, Suburb",
+        "contact": "567-901-6789"
+    },
+    {
+        "name": "Paras Hospitals",
+        "address": "345 Maple Lane, City",
+        "contact": "678-123-4567"
+    }
+]

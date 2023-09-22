@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MediSync - Hospitals</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <script src="js/bundle.js"></script>
+
+
+  <!-- Custom CSS -->
+  <style>
+    .panel-heading {
+      margin-bottom: 20px;
+    }
+
+    .navbar {
+      margin-bottom: 100px;
+    }
+
+    .lnks {
+
+      margin-left: 300px;
+      font-size: 20px;
+    }
+
+    .footer {
+      padding: 10px 15px;
+      background-color: #f5f5f5;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      margin-top: 80px;
+    }
+
+    .okkk {
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .loginTop {
+      margin-top: 60px;
+    }
+
+    #doctors-table {
+      width: 80%;
+      margin: 20px auto;
+      background-color: white;
+      border-collapse: collapse;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    #doctors-table th,
+    #doctors-table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #doctors-table th {
+      background-color: #333;
+      color: white;
+    }
+
+    #doctors-table tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+    /* #searchDoctorInput {
+        display: block;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        width: 80%;
+        background-color: white;
+        margin: 20px auto;
+    } */
+
+    #searchDoctorInput {
+      display: block;
+      margin: 20px auto;
+        padding: 10px 10px 10px 35px; /* Adjust padding for icon */
+        border: 1px solid #ddd;
+        width: 80%;
+        background-color: white;
+        position: relative;
+    }
+  </style>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">medisync@gmail.com</a>
+        <i class="bi bi-phone"></i> +91 73947214723
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="fa fas-book-medical"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="home.html">MediSync</a></h1>
+
+      <a href="https://goo.gl/maps/smU8ZmYj4QuuTNyi6" target="_blank" class="appointment-btn scrollto"><span
+          class="d-none d-md-inline">Hospitals</span> Near Me</a>
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <!-- <div><div id="includedContent"></div></div> -->
+
+  <section class="loginTop">
+    <div class="container">
+      <h1 class="text-center">Registered Doctors</h1>
+      <div>
+        <input type="text" id="searchDoctorInput" placeholder="Search by name, hospital, or specialization">
+      </div>
+      <table id="doctors-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Hospital</th>
+            <th>Specialization</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Table rows will be dynamically added here -->
+        </tbody>
+      </table>
+
+
+
+    </div>
+  </section><!-- End Hero -->
+
+
+
+  <footer id="footer" class="dowwn">
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>MediSync</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://github.com/LakshaySK106" target="_blank">MediSync</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- jQuery Version 1.11.1 -->
+  <script src="js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.js"></script>
+  <script src="/js/web3.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+
+
+    connect();
+    function login() {
+      $(".alert-warning").hide();
+
+      publicKey = web3.currentProvider.selectedAddress;
+      console.log(publicKey);
+      contractInstance.get_patient_list(function (error, result) {
+        if (!error) {
+          var PatientList = result;
+          for (var i = 0; i < PatientList.length; i++) {
+            if (publicKey.toLowerCase() == PatientList[i]) {
+              location.href = "./patient.html?key=" + publicKey;
+            }
+          }
+
+        } else {
+          console.log(error);
+          console.log("Invalid User!");
+          $(".alert-warning").show();
+        }
+      });
+
+      contractInstance.get_doctor_list(function (error, result) {
+        if (!error) {
+          var DoctorList = result;
+          for (var i = 0; i < DoctorList.length; i++) {
+            if (publicKey.toLowerCase() == DoctorList[i]) {
+              location.href = "./doctor.html?key=" + publicKey;
+            }
+          }
+
+        } else {
+          console.log(error);
+          $(".alert-warning").show();
+        }
+      });
+
+      console.log("Invalid User!");
+      $(".alert-warning").show();
+    }
+
+
+    // fetch('doctors.json')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     const tableBody = document.getElementById('table-body');
+    //     const urlParams = new URLSearchParams(window.location.search);
+    //     const hospitalName = urlParams.get('hospital');
+    //     const filteredDoctors = data.filter(doctor => doctor.hospital === hospitalName);
+    //     filteredDoctors.forEach(doctor => {
+    //       const row = document.createElement('tr');
+    //       row.innerHTML = `
+    //                     <td>${doctor.name}</td>
+    //                     <td>${doctor.hospital}</td>
+    //                     <td>${doctor.specialization}</td>
+    //                     <td>${doctor.age}</td>
+    //                 `;
+    //       tableBody.appendChild(row);
+    //     });
+    //   })
+    //   .catch(error => console.error('Error fetching data:', error));
+
+    fetch('doctors.json')
+      .then(response => response.json())
+      .then(data => {
+        const searchDoctorInput = document.getElementById('searchDoctorInput');
+        const tableBody = document.getElementById('table-body');
+        const urlParams = new URLSearchParams(window.location.search);
+        const hospitalName = urlParams.get('hospital');
+        console.log("urlp",hospitalName);
+
+        var filteredDoctors_1 = hospitalName ? data.filter(doctor => doctor.hospital === hospitalName) : data;
+        searchDoctorInput.addEventListener('input', () => {
+          const searchTerm = searchDoctorInput.value.toLowerCase();
+          const filteredDoctors_2 = filteredDoctors_1.filter(doctor =>
+            doctor.name.toLowerCase().includes(searchTerm) ||
+            doctor.hospital.toLowerCase().includes(searchTerm) ||
+            doctor.specialization.toLowerCase().includes(searchTerm)
+          );
+
+          populateDoctorTable(filteredDoctors_2);
+        });
+
+        function populateDoctorTable(doctors) {
+          tableBody.innerHTML = '';
+
+          doctors.forEach(doctor => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                            <td>${doctor.name}</td>
+                            <td>${doctor.hospital}</td>
+                            <td>${doctor.specialization}</td>
+                            <td>${doctor.age}</td>
+                        `;
+            tableBody.appendChild(row);
+          });
+        }
+
+        populateDoctorTable(filteredDoctors_1);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+
+
+
+  </script>
+
+</body>
+
+</html>

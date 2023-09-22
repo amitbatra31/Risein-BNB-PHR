@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="assets/img/favicon.png" rel="icon">
+
+<script src="https://unpkg.com/aadharjs"></script>
+
+<title>MediSync - Register</title>
+
+<style>
+    .panel-heading {
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        margin-bottom: 70px;
+    }
+
+    .registerTop {
+        margin-top: 120px;
+    }
+
+    .okkk {
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    .midd {
+        /* background-color: aqua; */
+        padding: 10px;
+        width: 70%;
+        margin-left: 380px;
+    }
+
+    .form-group {
+        padding: 7px;
+    }
+</style>
+<script src="/js/web3.min.js"></script>
+
+<link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">medisync@gmail.com</a>
+            <i class="bi bi-phone"></i> +91 73947214723
+        </div>
+        <div class="d-none d-lg-flex social-links align-items-center">
+            <a href="#" class="twitter"><i class="fa fas-book-medical"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+    </div>
+</div>
+
+
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto"><a href="index.html">MediSync</a></h1>
+
+        <a href="./home.html" class="appointment-btn scrollto">Login</a>
+
+        <a href="#" class="appointment-btn scrollto">Register</a>
+
+    </div>
+</header><!-- End Header -->
+
+<section class="registerTop">
+    <h3 class="text-center">Please enter your details to register.</h3>
+    <div class="alert alert-warning text-center" style="display: none;">
+        <strong>Warning!</strong> Invalid public key. Please enter a valid public key to register.
+    </div>
+    <div class="alert alert-info text-center" style="display: none;">
+        <strong>Info!</strong> User already registered. Please check your details.
+    </div>
+    <div class="midd">
+        <form name="registerForm" class="" action="./doctor.html">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Name:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="Name" required
+                        autofocus>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="age">Age:</label>
+                <div class="col-sm-8">
+                    <input type="age" class="form-control" id="age" placeholder="Enter age" name="Age" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="aadhar">Aadhar Number:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="aadhar" placeholder="Enter Aadhar number" name="Aadhar"
+                        required />
+                    <small class="text-muted">Please enter a valid 12-digit Aadhar number.</small>
+                    <p id="aadhar-error" class="text-danger"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="designation" class="control-label col-sm-2">Registering as:</label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="designation" required>
+                        <option selected disabled>-- Please Select --</option>
+                        <option value="0">Patient</option>
+                        <option value="1">Doctor</option>
+                    </select>
+                </div>
+            </div>
+
+<div class="form-group" id="specialization-div" style="display: none;">
+    <label class="control-label col-sm-2" for="specialization">Specialization:</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" id="hospital" placeholder="Enter specialization" name="specialization"
+            required autofocus>
+    </div>
+</div>
+<div class="form-group" id="hospital-div" style="display: none;">
+    <label class="control-label col-sm-2" for="hospital">Hospital:</label>
+    <div class="col-sm-8">
+        <input type="age" class="form-control" id="hospital" placeholder="Enter hospital" name="hospital" required>
+    </div>
+</div>
+
+
+
+        </form>
+    </div>
+    <div class="text-center">
+        <a class="appointment-btn scrollto okkk" onclick="addAgent()">REGISTER</a>
+    </div>
+</section>
+
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="/js/web3.min.js"></script>
+    <script src="https://unpkg.com/ipfs-api/dist/index.min.js" crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#designation").change(()=>{
+            if($("#designation").val() == "1"){
+                document.getElementById('specialization-div').style.display = "block";
+                document.getElementById('hospital-div').style.display = "block";
+            }else{
+                document.getElementById('specialization-div').style.display = "none";
+                document.getElementById('hospital-div').style.display = "none";                
+            }
+        })
+        
+
+        function addAgent() {
+            const errorContainer = document.getElementById('aadhar-error');
+            if (errorContainer.textContent !== 'VALID') {
+                alert('ENTER VALID AADHAR NUMBER');
+                return;
+            }
+            var ipfs = window.IpfsApi('localhost', '5001')
+
+            const Buffer = window.IpfsApi().Buffer;
+
+            name = $("#name").val();
+            age = $("#age").val();
+            designation = $("#designation").val();
+            specialization = $("#specialization").val();
+            hospital = $("#hospital").val();
+            designation = parseInt(designation);
+
+            publicKey = web3.currentProvider.selectedAddress;
+            publicKey = publicKey.toLowerCase();
+            console.log("PK:" + publicKey);
+
+            var validPublicKey = true;
+            var validAgent = true;
+            var PatientList = 0;
+            var DoctorList = 0;
+            var InsurerList = 0;
+
+            contractInstance.get_patient_list({ gas: 1000000 }, function (error, result) {
+                if (!error)
+                    PatientList = result;
+                else
+                    console.error(error);
+            });
+
+            contractInstance.get_doctor_list({ gas: 1000000 }, function (error, result) {
+                if (!error)
+                    DoctorList = result;
+                else
+                    console.error(error);
+            });
+
+            contractInstance.get_insurer_list({ gas: 1000000 }, function (error, result) {
+                if (!error)
+                    InsurerList = result;
+                else
+                    console.error(error);
+            });
+
+            if (validPublicKey == false) {
+                $(".alert-warning").show();
+            }
+            else {
+                for (j = 0; j < PatientList.length; j++) {
+                    if (publicKey == PatientList[j]) {
+                        validAgent = false;
+                    }
+                }
+                for (j = 0; j < DoctorList.length; j++) {
+                    if (publicKey == DoctorList[j]) {
+                        validAgent = false;
+                    }
+                }
+                for (j = 0; j < InsurerList.length; j++) {
+                    if (publicKey == InsurerList[j]) {
+                        validAgent = false;
+                    }
+                }
+                console.log(validAgent);
+                if (validAgent == true) {
+                    $(".alert-warning").hide()
+                    $(".alert-info").hide();
+
+                    var ipfshash = "";
+
+                    if (designation == "0") {
+                        var reportTitle = {name: name, Public_Key: publicKey};
+
+                        var buffer = Buffer(JSON.stringify(reportTitle));
+
+                        ipfs.files.add(buffer, (error, result) => {
+                            if (error) {
+                                console.log(error);
+                            } else {
+                                console.log("result:" + result);
+                                ipfshash = result[0].hash;
+                                console.log("Ipfs hash:" + ipfshash);
+                                contractInstance.add_agent(name, age, designation, ipfshash, { gas: 1000000 }, (err, res) => {
+                                    if (!err) {
+                                        location.replace("./patient.html");
+                                    } else {
+                                        console.log(err);
+                                    }
+                                })
+                            }
+                        })
+                    
+                    } else {
+                        contractInstance.add_agent(name, age, designation, ipfshash, { gas: 1000000 }, (err, res) => {
+                            if (!err) {
+                                if (designation == "1") {
+                                    location.replace("./doctor.html");
+                                }
+
+                            } else
+                                console.log(err);
+                        });
+                    }
+                }
+                else {
+                    $(".alert-info").show();
+                }
+
+            }
+
+            return false;
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+                const aadharInput = document.getElementById('aadhar');
+
+                aadharInput.addEventListener('input', function () {
+                    console.log(aadharInput.value);
+                    const aadharNumber = parseInt(aadharInput.value);
+                    const isValidAadhar = isValid.aadhar(aadharNumber);
+                    const errorContainer = document.getElementById('aadhar-error');
+                    if (isValidAadhar) {
+                        aadharInput.setCustomValidity('');
+                        errorContainer.textContent = 'VALID';
+                    } else {
+                        aadharInput.setCustomValidity(
+                            'Please enter a valid 12-digit Aadhar number.',
+                        );
+                        errorContainer.textContent =
+                            'Invalid Aadhar number. Please enter a valid 12-digit Aadhar number.';
+                    }
+                });
+            });
+    </script>
+
+</body>
+
+</html>
