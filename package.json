@@ -4,7 +4,7 @@
   "description": "Decentralized platform for patient and doctor to connect securely",
   "main": "index.js",
   "scripts": {
-    
+    "start": "lite-server"
   },
   "dependencies": {
     "ipfs-http-client": "^60.0.1",
